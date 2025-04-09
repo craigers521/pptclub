@@ -48,8 +48,8 @@ def make_ppt(scores):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-o", "--order", nargs="+", help="specify space seperate list of presenters")
-    parser.add_argument("-q", "--qr", nargs=1, help="specify URL for QR code generation")
+    parser.add_argument("-o", "--order", nargs="+", help="specify space seperated list of presenters ex Curly Larry Moe")
+    parser.add_argument("-q", "--qr", nargs=1, help="specify URL for QR code generation in quotes")
     parser.add_argument("-s", "--score", nargs="?", help="specify CSV file for scoring, otherwise will look for export.csv")
     parser.add_argument("-p", "--powerpoint", nargs="?", help="specify filename for ppt, default will be results.pptx" )
     args = parser.parse_args()
