@@ -39,7 +39,9 @@ def text_to_int(word, grp_size):
     else: return grp_size
 
 def score_print(output):
-    for k,v in output.items():
+    sorted_out = dict(sorted(output.items(), key=lambda item: item[1], reverse=True))
+
+    for k,v in sorted_out.items():
         print(k[26:], " : ", v)
 
 def make_ppt(scores):
